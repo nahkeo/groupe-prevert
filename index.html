@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Groupe Prévert – Pompes à chaleur, climatisation et solaire à Créteil</title>
+<meta name="description" content="Groupe Prévert : diagnostic, conception et réalisation de vos installations de pompes à chaleur, ballons thermodynamiques, climatisation et solaire dans le Val-de-Marne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#262B2E; --ink-2:#565F64; --ink-3:#7C858A;
+  --bg:#FFFFFF; --bg-2:#F2F5EF; --line:#E1E6DC;
+  --green:#5E9E38; --green-d:#3D7225; --green-l:#E4EFDC;
+  --sand:#D9A441; --on-green:#FFFFFF;
+  --dark:#1F2A22; --dark-2:#2A372D; --on-dark:#F3F6F0; --on-dark-2:#B9C5B5;
+  --field:#FFFFFF; --field-line:#CFD7C9;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#E9EEE6; --ink-2:#B3BEB0; --ink-3:#8E998B; --bg:#121813; --bg-2:#19211A; --line:#2B362C;
+  --green:#7DBA55; --green-d:#7DBA55; --green-l:#233122; --sand:#E2B45A; --on-green:#0F150F;
+  --dark:#0B100C; --dark-2:#162017; --on-dark:#F3F6F0; --on-dark-2:#AAB6A6; --field:#19211A; --field-line:#33402F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#E9EEE6; --ink-2:#B3BEB0; --ink-3:#8E998B; --bg:#121813; --bg-2:#19211A; --line:#2B362C;
+  --green:#7DBA55; --green-d:#7DBA55; --green-l:#233122; --sand:#E2B45A; --on-green:#0F150F;
+  --dark:#0B100C; --dark-2:#162017; --on-dark:#F3F6F0; --on-dark-2:#AAB6A6; --field:#19211A; --field-line:#33402F; color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+h1{font-size:clamp(2.5rem,5.4vw,4.4rem);font-weight:600;letter-spacing:-.035em}
+h2{font-size:clamp(1.9rem,3.4vw,2.75rem)}
+h3{font-size:1.2rem;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+section{padding:112px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+.sec-head p{color:var(--ink-2);max-width:52ch}
+@media (max-width:860px){section{padding:80px 0}.sec-head{grid-template-columns:1fr;gap:16px;margin-bottom:40px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green-d);color:#fff;font-family:inherit;font-weight:600;font-size:1rem;line-height:1;text-decoration:none;padding:15px 24px;border-radius:4px;border:0;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--green)}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink-3)}
+.btn.line:hover{box-shadow:inset 0 0 0 1px var(--ink);background:transparent}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:var(--on-green)}}
+:root[data-theme="dark"] .btn{color:var(--on-green)}
+
+/* Barre info + en-tête */
+.info{background:var(--dark);color:var(--on-dark-2);font-size:.88rem}
+.info .wrap{display:flex;gap:28px;height:40px;align-items:center}
+.info a{text-decoration:none;color:var(--on-dark)}
+.info .r{margin-left:auto}
+@media (max-width:760px){.info .hide-s{display:none}.info .r{margin-left:0}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:32px;height:80px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:50px;height:38px;flex:none}
+.brand-txt{display:flex;flex-direction:column;font-weight:700;font-size:1.12rem;letter-spacing:.04em;color:var(--ink-2);line-height:1.15}
+.brand-txt small{font-weight:500;font-size:.6rem;letter-spacing:.14em;color:var(--green)}
+nav.main{margin-left:auto;display:flex;align-items:center;gap:30px;font-weight:500;font-size:.98rem}
+nav.main>a{text-decoration:none}
+nav.main a:hover,.dd>button:hover{color:var(--green-d)}
+.dd{position:relative}
+.dd>button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;display:flex;align-items:center;gap:8px}
+.dd>button::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .15s}
+.dd>button[aria-expanded="true"]::after{transform:translateY(2px) rotate(-135deg)}
+.dd-panel{display:none;position:absolute;top:calc(100% + 28px);left:-20px;min-width:300px;background:var(--bg);border:1px solid var(--line);border-radius:6px;box-shadow:0 18px 40px rgba(25,35,25,.12);padding:10px;z-index:20}
+.dd-panel::before{content:"";position:absolute;left:0;right:0;top:-30px;height:30px}
+.dd-panel a{display:block;padding:10px 14px;border-radius:4px;text-decoration:none;color:var(--ink-2)}
+.dd-panel a:hover{background:var(--bg-2);color:var(--ink)}
+.dd.open .dd-panel{display:block}
+@media (hover:hover) and (min-width:1081px){.dd:hover .dd-panel{display:block}}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:var(--ink);border-radius:4px;padding:9px 14px;font:inherit;font-weight:500}
+@media (max-width:1080px){
+  nav.main{display:none;position:absolute;left:0;right:0;top:80px;background:var(--bg);flex-direction:column;align-items:flex-start;padding:20px 28px 28px;gap:18px;border-bottom:1px solid var(--line);max-height:calc(100vh - 120px);overflow:auto}
+  nav.main.open{display:flex}
+  .menu-btn{display:block}
+  .top .btn{display:none}
+  .dd-panel{position:static;min-width:0;box-shadow:none;border:0;border-left:2px solid var(--green);border-radius:0;margin-top:10px;padding:0 0 0 8px}
+  .dd-panel::before{display:none}
+}
+
+/* Hero */
+.hero{padding:0;background:var(--bg-2);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;padding-top:96px;padding-bottom:96px;position:relative}
+.hero .roof{position:absolute;right:-120px;top:-40px;width:720px;height:auto;pointer-events:none}
+.hero-txt{position:relative}
+.hero-txt .tag{color:var(--green-d);font-weight:600;margin-bottom:22px}
+.hero-txt p.sub{font-size:1.22rem;color:var(--ink-2);max-width:46ch;margin-top:24px}
+.hero-txt .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.pillars{display:flex;flex-wrap:wrap;gap:28px;margin-top:52px;padding-top:28px;border-top:1px solid var(--line);color:var(--ink-2);font-size:.97rem}
+.pillars span{display:flex;align-items:center;gap:10px}
+.pillars span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.quick{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:34px;box-shadow:0 30px 60px -30px rgba(25,40,25,.28)}
+.quick h2{font-size:1.5rem;margin-bottom:6px}
+.quick > p{color:var(--ink-2);margin-bottom:22px;font-size:.98rem}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr;gap:48px;padding-top:64px;padding-bottom:72px}.hero .roof{width:520px;right:-180px;top:-60px;opacity:.6}}
+
+/* Champs */
+.fields{display:grid;gap:14px}
+.fields.two{grid-template-columns:1fr 1fr}
+.fields .full{grid-column:1/-1}
+label{display:block;font-size:.88rem;font-weight:500;color:var(--ink-2);margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--field);border:1px solid var(--field-line);border-radius:4px;padding:12px 14px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-l)}
+textarea{min-height:140px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--ink-2)}
+.check input{width:18px;height:18px;margin-top:3px;flex:none;accent-color:var(--green-d)}
+.msg{font-size:.95rem;font-weight:500;color:var(--green-d);min-height:1.4em}
+.msg.err{color:#B4462F}
+@media (max-width:600px){.fields.two{grid-template-columns:1fr}}
+
+/* Équipements – sélecteur */
+.eq-wrap{display:grid;grid-template-columns:minmax(280px,.85fr) 1.6fr;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.eq-list{display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--bg)}
+.eq-tab{position:relative;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:center;text-align:left;padding:22px 26px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink-2);font:inherit;cursor:pointer;transition:background .2s,color .2s}
+.eq-tab:last-child{border-bottom:0}
+.eq-tab svg{width:36px;height:36px;color:var(--ink-3);transition:color .2s,transform .25s}
+.eq-tab b{display:block;font-weight:600;font-size:1.02rem;line-height:1.25}
+.eq-tab small{display:block;font-size:.88rem;color:var(--ink-3);margin-top:3px}
+.eq-tab:hover{background:var(--bg-2);color:var(--ink)}
+.eq-tab[aria-selected="true"]{background:var(--bg-2);color:var(--ink)}
+.eq-tab[aria-selected="true"] svg{color:var(--green-d);transform:scale(1.08)}
+.eq-tab::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green-d);transform:scaleY(0);transition:transform .25s}
+.eq-tab[aria-selected="true"]::before{transform:scaleY(1)}
+.eq-tab .bar{position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--green)}
+.eq-wrap.auto .eq-tab[aria-selected="true"] .bar{animation:fill 7s linear forwards}
+@keyframes fill{to{width:100%}}
+.eq-view{padding:48px 52px;background:var(--bg-2)}
+.eq-panel[hidden]{display:none}
+.eq-panel.in{animation:panelIn .4s ease-out}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.eq-top{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.eq-top svg{width:76px;height:76px;color:var(--green-d);padding:16px;background:var(--bg);border:1px solid var(--line);border-radius:8px}
+.eq-top h3{font-size:clamp(1.5rem,2.4vw,2rem);margin-bottom:12px}
+.eq-top p{color:var(--ink-2);font-size:1.08rem;max-width:52ch}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin:32px 0 36px}
+.facts .wide{grid-column:1/-1}
+.facts dt{font-size:.85rem;font-weight:600;color:var(--green-d);margin-bottom:6px}
+.facts dd{margin:0 0 18px;color:var(--ink)}
+.facts dd:last-child{margin-bottom:0}
+.facts ul{list-style:none;margin:0;padding:0}
+.facts li{padding:6px 0 6px 22px;position:relative;border-bottom:1px solid var(--line)}
+.facts li:last-child{border-bottom:0}
+.facts li::before{content:"";position:absolute;left:2px;top:15px;width:10px;height:6px;border-left:1.8px solid var(--green);border-bottom:1.8px solid var(--green);transform:rotate(-45deg)}
+.eq-actions{display:flex;flex-wrap:wrap;gap:12px}
+.eq-cta{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-top:24px;padding:32px 40px;border-radius:8px;background:var(--dark);color:var(--on-dark)}
+.eq-cta p{color:var(--on-dark-2);margin-top:6px}
+.eq-cta h3{font-size:1.3rem}
+@media (max-width:960px){
+  .eq-wrap{grid-template-columns:1fr}
+  .eq-list{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);scroll-snap-type:x mandatory}
+  .eq-tab{flex:0 0 auto;grid-template-columns:28px auto;padding:16px 20px;border-bottom:0;border-right:1px solid var(--line);scroll-snap-align:start}
+  .eq-tab svg{width:26px;height:26px}
+  .eq-tab small{display:none}
+  .eq-tab::before{top:auto;left:0;right:0;width:auto;height:3px;transform:scaleX(0)}
+  .eq-tab[aria-selected="true"]::before{transform:scaleX(1)}
+  .eq-view{padding:32px 24px}
+  .eq-cta{flex-direction:column;align-items:flex-start;padding:28px 24px}
+}
+@media (max-width:600px){.eq-top{grid-template-columns:1fr}.eq-top svg{width:60px;height:60px;padding:12px}.facts{grid-template-columns:1fr}}
+
+/* Cibles */
+.cibles{background:var(--bg-2)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:44px;overflow-x:auto}
+.tabs button{font:inherit;font-weight:500;background:none;border:0;padding:14px 22px;color:var(--ink-2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--green-d)}
+.panel{display:grid;grid-template-columns:1fr 1.4fr;gap:64px}
+.panel[hidden]{display:none}
+.panel .intro p{color:var(--ink-2);margin-top:16px}
+.panel ul{list-style:none;margin:0;padding:0}
+.panel li{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1.4fr;gap:24px}
+.panel li:first-child{padding-top:0}
+.panel li p{color:var(--ink-2);font-size:.98rem}
+@media (max-width:860px){.panel{grid-template-columns:1fr;gap:28px}.panel li{grid-template-columns:1fr;gap:6px}}
+
+/* Méthode */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s}
+.steps li{counter-increment:s;padding:28px 24px 0 0;border-top:2px solid var(--line);position:relative}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font-weight:600;color:var(--green-d);font-size:.95rem;margin-bottom:14px}
+.steps li:first-child{border-top-color:var(--green-d)}
+.steps h3{font-size:1.1rem;margin-bottom:8px}
+.steps p{color:var(--ink-2);font-size:.96rem}
+@media (max-width:960px){.steps{grid-template-columns:1fr 1fr;gap:28px 24px}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* Aides */
+.aides{background:var(--dark);color:var(--on-dark)}
+.aides .sec-head p{color:var(--on-dark-2)}
+.aid-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--dark-2);border:1px solid var(--dark-2)}
+.aid{background:var(--dark);padding:32px 28px}
+.aid h3{margin-bottom:10px}
+.aid p{color:var(--on-dark-2);font-size:.96rem}
+.aides .foot{margin-top:28px;color:var(--on-dark-2);font-size:.92rem;max-width:80ch}
+@media (max-width:960px){.aid-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.aid-grid{grid-template-columns:1fr}}
+
+/* Réalisations */
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:32px}
+.filters button{font:inherit;font-size:.95rem;font-weight:500;padding:9px 16px;border-radius:4px;border:1px solid var(--line);background:var(--bg);color:var(--ink-2);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.shot{margin:0}
+.shot .ph{aspect-ratio:4/3;border-radius:6px;background:var(--bg-2);display:grid;place-items:center;overflow:hidden}
+.shot .ph svg{width:72px;opacity:.5;color:var(--green)}
+.shot figcaption{padding:14px 2px 0;font-weight:500}
+.shot figcaption span{display:block;font-weight:400;color:var(--ink-3);font-size:.92rem}
+.shot[hidden]{display:none}
+@media (max-width:860px){.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.gallery{grid-template-columns:1fr}}
+
+/* Zone + FAQ */
+.zone{background:var(--bg-2)}
+.zone .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.zone p{color:var(--ink-2);margin-top:18px;max-width:46ch}
+.towns{list-style:none;margin:0;padding:0;columns:2;column-gap:32px}
+.towns li{padding:11px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+@media (max-width:860px){.zone .wrap{grid-template-columns:1fr;gap:32px}}
+.faq .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:64px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-weight:500;font-size:1.08rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:9px;height:9px;margin-top:8px;border-right:1.5px solid var(--ink-2);border-bottom:1.5px solid var(--ink-2);transform:rotate(45deg);transition:transform .15s}
+details[open] summary::after{transform:rotate(-135deg);margin-top:12px}
+details p{padding:0 40px 24px 0;color:var(--ink-2)}
+@media (max-width:860px){.faq .wrap{grid-template-columns:1fr;gap:28px}}
+
+/* Fiche contact */
+.contact{border-top:1px solid var(--line)}
+.contact .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px}
+.card{background:var(--dark);color:var(--on-dark);border-radius:8px;padding:40px}
+.card h3{font-size:1.4rem;margin-bottom:6px}
+.card > p{color:var(--on-dark-2);margin-bottom:28px}
+.card dl{margin:0;display:grid;gap:22px}
+.card dt{font-size:.85rem;color:var(--on-dark-2);margin-bottom:4px}
+.card dd{margin:0;font-size:1.05rem}
+.card dd a{text-decoration:none}
+.card dd a:hover{text-decoration:underline}
+.card .hours{display:grid;grid-template-columns:auto 1fr;gap:4px 18px}
+.contact h2{margin-bottom:12px}
+.contact .lead{color:var(--ink-2);margin-bottom:32px;max-width:52ch}
+.seg{display:flex;border:1px solid var(--field-line);border-radius:4px;overflow:hidden}
+.seg label{flex:1;margin:0;position:relative}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:block;text-align:center;padding:11px 8px;cursor:pointer;font-size:.95rem;color:var(--ink-2);border-left:1px solid var(--field-line)}
+.seg label:first-child span{border-left:0}
+.seg input:checked + span{background:var(--green-l);color:var(--ink);font-weight:600}
+.seg input:focus-visible + span{outline:2px solid var(--sand);outline-offset:-2px}
+@media (max-width:960px){.contact .wrap{grid-template-columns:1fr;gap:48px}}
+
+/* Pied de page */
+footer{background:var(--dark);color:var(--on-dark-2);padding:72px 0 36px;font-size:.95rem}
+footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer h4{color:var(--on-dark);font-weight:600;font-size:1rem;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{padding:4px 0}
+footer a{text-decoration:none}
+footer a:hover{color:var(--on-dark)}
+footer .brand-txt{color:var(--on-dark)}
+footer .about{margin-top:18px;max-width:34ch}
+.legal{border-top:1px solid var(--dark-2);margin-top:56px;padding-top:24px;font-size:.85rem;display:grid;gap:8px}
+@media (max-width:960px){footer .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){footer .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="info">
+  <div class="wrap">
+    <span class="hide-s">Créteil et Val-de-Marne</span>
+    <span class="hide-s">Lundi au vendredi, 8 h – 18 h</span>
+    <a class="r" href="tel:+33100000000">01 00 00 00 00</a>
+    <a class="hide-s" href="mailto:contact@groupe-prevert.fr">contact@groupe-prevert.fr</a>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil" aria-label="Groupe Prévert, accueil">
+      <svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 40 32 8l28 32" fill="none" stroke="#6AAA3F" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><rect x="44" y="10" width="8" height="16" fill="#6AAA3F"/><path d="M20 40 32 27l12 13" fill="none" stroke="#8A9397" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <span class="brand-txt">GROUPE PREVERT<small>DIAGNOSTIC CONCEPTION RÉALISATION</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="main" id="nav">
+      <div class="dd"><button type="button" aria-expanded="false" aria-controls="dd-part">Particuliers</button>
+        <div class="dd-panel" id="dd-part">
+          <a href="#pac-air-eau">Pompe à chaleur air/eau</a>
+          <a href="#pac-air-air">Pompe à chaleur air/air et climatisation</a>
+          <a href="#ballon">Ballon thermodynamique</a>
+          <a href="#solaire">Solaire et photovoltaïque</a>
+          <a href="#entretien">Entretien et dépannage</a>
+        </div></div>
+      <div class="dd"><button type="button" aria-expanded="false" aria-controls="dd-pro">Professionnels</button>
+        <div class="dd-panel" id="dd-pro">
+          <a href="#professionnels" data-tab="pro">Climatisation de bureaux et commerces</a>
+          <a href="#professionnels" data-tab="pro">Pompe à chaleur tertiaire</a>
+          <a href="#professionnels" data-tab="pro">Photovoltaïque professionnel</a>
+          <a href="#professionnels" data-tab="pro">Contrats de maintenance</a>
+        </div></div>
+      <div class="dd"><button type="button" aria-expanded="false" aria-controls="dd-syn">Syndics</button>
+        <div class="dd-panel" id="dd-syn">
+          <a href="#professionnels" data-tab="syn">Chauffage collectif</a>
+          <a href="#professionnels" data-tab="syn">Eau chaude collective</a>
+          <a href="#professionnels" data-tab="syn">Entretien des équipements communs</a>
+        </div></div>
+      <a href="#aides">Aides</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Demander un devis</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <svg class="roof" viewBox="0 0 720 520" aria-hidden="true"><path d="M40 500 380 120l340 380" fill="none" stroke="var(--green)" stroke-opacity=".12" stroke-width="64" stroke-linejoin="round"/><rect x="520" y="140" width="64" height="150" fill="var(--green)" fill-opacity=".12"/></svg>
+  <div class="wrap">
+    <div class="hero-txt">
+      <p class="tag">Chauffage, eau chaude et énergie solaire</p>
+      <h1>Des installations performantes, pensées pour durer.</h1>
+      <p class="sub">Groupe Prévert étudie, installe et entretient vos pompes à chaleur, ballons thermodynamiques, climatisations et panneaux solaires, chez les particuliers comme chez les professionnels.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Demander un devis gratuit</a>
+        <a class="btn line" href="#equipements">Découvrir nos solutions</a>
+      </div>
+      <div class="pillars"><span>Diagnostic gratuit</span><span>Pose par nos techniciens</span><span>Entretien et dépannage</span></div>
+    </div>
+    <form class="quick" id="rappel" novalidate>
+      <h2>Être rappelé</h2>
+      <p>Laissez vos coordonnées, un technicien vous rappelle sous 48 h ouvrées.</p>
+      <div class="fields">
+        <div><label for="q-nom">Nom</label><input id="q-nom" name="nom" autocomplete="name" required></div>
+        <div><label for="q-tel">Téléphone</label><input id="q-tel" name="tel" type="tel" autocomplete="tel" required></div>
+        <div><label for="q-proj">Votre projet</label>
+          <select id="q-proj" name="projet"><option>Pompe à chaleur</option><option>Climatisation</option><option>Ballon thermodynamique</option><option>Solaire / photovoltaïque</option><option>Entretien ou dépannage</option></select></div>
+        <button class="btn" type="submit">Être rappelé</button>
+        <p class="msg" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="equipements">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Nos solutions</h2>
+      <p>De l’étude de votre logement à l’entretien annuel, un seul interlocuteur pour chaque équipement.</p>
+    </div>
+    <div class="eq-wrap" id="eqWrap">
+      <div class="eq-list" role="tablist" aria-label="Nos solutions">
+        <button class="eq-tab" role="tab" id="pac-air-eau" aria-selected="true" aria-controls="eqp-pac-air-eau" tabindex="0"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="34" height="24" rx="2"/><circle cx="15" cy="20" r="7"/><path d="M15 13v14M8 20h14M28 13v14M32 13v14"/></svg><span><b>Pompe à chaleur air/eau</b><small>Chauffage et eau chaude</small></span><i class="bar" aria-hidden="true"></i></button>
+        <button class="eq-tab" role="tab" id="pac-air-air" aria-selected="false" aria-controls="eqp-pac-air-air" tabindex="-1"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="9" width="34" height="12" rx="2"/><path d="M7 17h26M11 26c2 2 2 5 0 7M20 26c2 2 2 5 0 7M29 26c2 2 2 5 0 7"/></svg><span><b>Pompe à chaleur air/air et climatisation</b><small>Chaud l’hiver, frais l’été</small></span><i class="bar" aria-hidden="true"></i></button>
+        <button class="eq-tab" role="tab" id="ballon" aria-selected="false" aria-controls="eqp-ballon" tabindex="-1"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="11" y="3" width="18" height="34" rx="8"/><path d="M15 24h10M15 18h10M20 3v5"/></svg><span><b>Ballon thermodynamique</b><small>Eau chaude économique</small></span><i class="bar" aria-hidden="true"></i></button>
+        <button class="eq-tab" role="tab" id="solaire" aria-selected="false" aria-controls="eqp-solaire" tabindex="-1"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 34 11 14h25l-7 20z"/><path d="M7.5 24h25M19 14l-5 20M27 14l-5 20"/><circle cx="31" cy="6" r="3"/></svg><span><b>Solaire et photovoltaïque</b><small>Produire sa propre énergie</small></span><i class="bar" aria-hidden="true"></i></button>
+        <button class="eq-tab" role="tab" id="entretien" aria-selected="false" aria-controls="eqp-entretien" tabindex="-1"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M26 4a9 9 0 0 0-8 12L5 29l6 6 13-13A9 9 0 0 0 36 14l-5 5-6-1-1-6 5-5z" stroke-linejoin="round"/></svg><span><b>Entretien et dépannage</b><small>Des équipements suivis</small></span><i class="bar" aria-hidden="true"></i></button>
+      </div>
+      <div class="eq-view">
+      <div class="eq-panel" role="tabpanel" id="eqp-pac-air-eau" aria-labelledby="pac-air-eau">
+        <div class="eq-top"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="34" height="24" rx="2"/><circle cx="15" cy="20" r="7"/><path d="M15 13v14M8 20h14M28 13v14M32 13v14"/></svg><div><h3>Pompe à chaleur air/eau</h3><p>Remplace votre chaudière fioul ou gaz et alimente radiateurs, plancher chauffant et eau chaude sanitaire.</p></div></div>
+        <dl class="facts">
+          <div class="wide"><dt>Idéal pour</dt><dd>Maisons chauffées au fioul, au gaz ou à l’électricité, équipées de radiateurs à eau ou d’un plancher chauffant.</dd></div>
+          <div><dt>Nous assurons</dt><dd><ul><li>Étude de dimensionnement</li><li>Dépose de l’ancienne chaudière</li><li>Pose et raccordement</li><li>Mise en service et réglages</li></ul></dd></div>
+          <div><dt>Aides possibles</dt><dd>MaPrimeRénov’, prime CEE, éco-PTZ, TVA réduite</dd><dt>Durée d’intervention</dt><dd>1 à 3 jours</dd></div>
+        </dl>
+        <div class="eq-actions"><a class="btn" href="#contact" data-proj="Pompe à chaleur air/eau">Demander un devis</a><a class="btn line" href="#rappel">Être rappelé</a></div>
+      </div>
+      <div class="eq-panel" role="tabpanel" id="eqp-pac-air-air" aria-labelledby="pac-air-air" hidden>
+        <div class="eq-top"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="9" width="34" height="12" rx="2"/><path d="M7 17h26M11 26c2 2 2 5 0 7M20 26c2 2 2 5 0 7M29 26c2 2 2 5 0 7"/></svg><div><h3>Pompe à chaleur air/air et climatisation</h3><p>Chauffage l’hiver, fraîcheur l’été, en mono ou multi-split, avec des unités discrètes.</p></div></div>
+        <dl class="facts">
+          <div class="wide"><dt>Idéal pour</dt><dd>Logements sans réseau de chauffage à eau, pièces à rafraîchir l’été, bureaux et commerces.</dd></div>
+          <div><dt>Nous assurons</dt><dd><ul><li>Choix et implantation des unités</li><li>Pose discrète des liaisons</li><li>Mise en service</li><li>Programmation et pilotage</li></ul></dd></div>
+          <div><dt>Aides possibles</dt><dd>Prime CEE selon conditions</dd><dt>Durée d’intervention</dt><dd>Selon le nombre d’unités</dd></div>
+        </dl>
+        <div class="eq-actions"><a class="btn" href="#contact" data-proj="Pompe à chaleur air/air ou climatisation">Demander un devis</a><a class="btn line" href="#rappel">Être rappelé</a></div>
+      </div>
+      <div class="eq-panel" role="tabpanel" id="eqp-ballon" aria-labelledby="ballon" hidden>
+        <div class="eq-top"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="11" y="3" width="18" height="34" rx="8"/><path d="M15 24h10M15 18h10M20 3v5"/></svg><div><h3>Ballon thermodynamique</h3><p>Votre eau chaude produite à partir des calories de l’air, pour une consommation bien inférieure à un cumulus électrique.</p></div></div>
+        <dl class="facts">
+          <div class="wide"><dt>Idéal pour</dt><dd>Foyers équipés d’un cumulus électrique à remplacer.</dd></div>
+          <div><dt>Nous assurons</dt><dd><ul><li>Choix de la capacité selon le foyer</li><li>Dépose de l’ancien ballon</li><li>Raccordement</li><li>Mise en service</li></ul></dd></div>
+          <div><dt>Aides possibles</dt><dd>MaPrimeRénov’, prime CEE, TVA réduite</dd><dt>Durée d’intervention</dt><dd>1 journée</dd></div>
+        </dl>
+        <div class="eq-actions"><a class="btn" href="#contact" data-proj="Ballon thermodynamique">Demander un devis</a><a class="btn line" href="#rappel">Être rappelé</a></div>
+      </div>
+      <div class="eq-panel" role="tabpanel" id="eqp-solaire" aria-labelledby="solaire" hidden>
+        <div class="eq-top"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 34 11 14h25l-7 20z"/><path d="M7.5 24h25M19 14l-5 20M27 14l-5 20"/><circle cx="31" cy="6" r="3"/></svg><div><h3>Solaire et photovoltaïque</h3><p>Panneaux photovoltaïques en autoconsommation et chauffe-eau solaire, de l’étude d’ensoleillement au raccordement.</p></div></div>
+        <dl class="facts">
+          <div class="wide"><dt>Idéal pour</dt><dd>Toitures bien exposées, particuliers et professionnels souhaitant réduire leur facture d’électricité.</dd></div>
+          <div><dt>Nous assurons</dt><dd><ul><li>Étude d’ensoleillement</li><li>Pose en toiture</li><li>Raccordement</li><li>Démarches administratives</li></ul></dd></div>
+          <div><dt>Aides possibles</dt><dd>Prime à l’autoconsommation selon la puissance</dd><dt>Durée d’intervention</dt><dd>Selon la surface</dd></div>
+        </dl>
+        <div class="eq-actions"><a class="btn" href="#contact" data-proj="Solaire / photovoltaïque">Demander un devis</a><a class="btn line" href="#rappel">Être rappelé</a></div>
+      </div>
+      <div class="eq-panel" role="tabpanel" id="eqp-entretien" aria-labelledby="entretien" hidden>
+        <div class="eq-top"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M26 4a9 9 0 0 0-8 12L5 29l6 6 13-13A9 9 0 0 0 36 14l-5 5-6-1-1-6 5-5z" stroke-linejoin="round"/></svg><div><h3>Entretien et dépannage</h3><p>Contrats d’entretien annuels, contrôle d’étanchéité et interventions sur toutes marques.</p></div></div>
+        <dl class="facts">
+          <div class="wide"><dt>Idéal pour</dt><dd>Pompes à chaleur, climatisations et ballons, installés par nos soins ou par un autre professionnel.</dd></div>
+          <div><dt>Nous assurons</dt><dd><ul><li>Contrôle d’étanchéité des fluides</li><li>Nettoyage et vérifications</li><li>Mesure des performances</li><li>Dépannage toutes marques</li></ul></dd></div>
+          <div><dt>Aides possibles</dt><dd>Contrat annuel sur devis</dd><dt>Durée d’intervention</dt><dd>Visite d’environ 1 à 2 heures</dd></div>
+        </dl>
+        <div class="eq-actions"><a class="btn" href="#contact" data-proj="Entretien ou dépannage">Demander un devis</a><a class="btn line" href="#rappel">Être rappelé</a></div>
+      </div>
+      </div>
+    </div>
+    <div class="eq-cta">
+      <div><h3>Vous ne savez pas quelle solution choisir ?</h3><p>Le diagnostic gratuit de votre logement détermine l’équipement et la puissance adaptés.</p></div>
+      <a class="btn" href="#contact">Planifier un diagnostic</a>
+    </div>
+  </div>
+</section>
+
+<section class="cibles" id="professionnels">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Une offre pour chaque client</h2>
+      <p>Maisons, appartements, locaux professionnels ou immeubles : nous adaptons l’étude et l’installation à votre bâtiment.</p>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="t-part" aria-selected="true" aria-controls="p-part">Particuliers</button>
+      <button role="tab" id="t-pro" aria-selected="false" aria-controls="p-pro" tabindex="-1">Professionnels</button>
+      <button role="tab" id="t-syn" aria-selected="false" aria-controls="p-syn" tabindex="-1">Syndics et copropriétés</button>
+    </div>
+    <div class="panel" role="tabpanel" id="p-part" aria-labelledby="t-part">
+      <div class="intro"><h3>Maisons et appartements</h3><p>Nous remplaçons votre ancien chauffage par un équipement plus économe et vous accompagnons dans le montage des aides.</p></div>
+      <ul>
+        <li><h3>Remplacement de chaudière</h3><p>Dépose de la chaudière fioul ou gaz et pose d’une pompe à chaleur air/eau.</p></li>
+        <li><h3>Confort d’été</h3><p>Climatisation réversible pour une ou plusieurs pièces.</p></li>
+        <li><h3>Eau chaude</h3><p>Ballon thermodynamique ou chauffe-eau solaire selon votre logement.</p></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="p-pro" aria-labelledby="t-pro" hidden>
+      <div class="intro"><h3>Bureaux, commerces et locaux d’activité</h3><p>Des installations dimensionnées pour vos surfaces et un suivi qui limite les interruptions d’activité.</p></div>
+      <ul>
+        <li><h3>Climatisation de bureaux et commerces</h3><p>Confort été comme hiver pour vos équipes et vos clients.</p></li>
+        <li><h3>Pompe à chaleur tertiaire</h3><p>Remplacement des chaudières de vos locaux pour réduire vos dépenses énergétiques.</p></li>
+        <li><h3>Photovoltaïque professionnel</h3><p>Production d’électricité en toiture pour l’autoconsommation de vos locaux.</p></li>
+        <li><h3>Contrats de maintenance</h3><p>Visites planifiées et interventions prioritaires sur l’ensemble de votre parc.</p></li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="p-syn" aria-labelledby="t-syn" hidden>
+      <div class="intro"><h3>Immeubles et copropriétés</h3><p>Un interlocuteur unique pour le syndic, de l’étude présentée en assemblée générale jusqu’à l’entretien.</p></div>
+      <ul>
+        <li><h3>Chauffage collectif</h3><p>Étude et remplacement des installations collectives par des pompes à chaleur.</p></li>
+        <li><h3>Eau chaude collective</h3><p>Production d’eau chaude thermodynamique ou solaire pour l’immeuble.</p></li>
+        <li><h3>Entretien des équipements communs</h3><p>Contrat annuel et compte rendu de chaque intervention.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Notre méthode</h2>
+      <p>Diagnostic, conception, réalisation : chaque projet suit les mêmes étapes, pour un résultat maîtrisé.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Diagnostic</h3><p>Visite du logement, de l’isolation et de l’installation existante.</p></li>
+      <li><h3>Conception</h3><p>Choix de l’équipement, dimensionnement et devis détaillé avec les aides.</p></li>
+      <li><h3>Réalisation</h3><p>Pose par nos techniciens, chantier propre et délais tenus.</p></li>
+      <li><h3>Mise en service</h3><p>Réglages, essais et prise en main de l’équipement avec vous.</p></li>
+      <li><h3>Suivi</h3><p>Entretien annuel et assistance en cas de panne.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="aides" id="aides">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Financer vos travaux</h2>
+      <p>Une part importante du coût d’une pompe à chaleur ou d’un ballon thermodynamique peut être prise en charge par les aides publiques. Nous les intégrons directement à votre devis.</p>
+    </div>
+    <div class="aid-grid">
+      <div class="aid"><h3>MaPrimeRénov’</h3><p>Aide de l’État calculée selon les revenus du foyer, pour les propriétaires occupants et bailleurs.</p></div>
+      <div class="aid"><h3>Prime CEE</h3><p>Prime des fournisseurs d’énergie, cumulable avec MaPrimeRénov’.</p></div>
+      <div class="aid"><h3>Éco-prêt à taux zéro</h3><p>Prêt sans intérêts pour financer le reste à charge.</p></div>
+      <div class="aid"><h3>TVA réduite</h3><p>Taux réduit sur les travaux de rénovation énergétique des logements de plus de deux ans.</p></div>
+    </div>
+    <p class="foot">Montants variables selon les revenus, le logement et l’équipement. Les aides de l’État sont réservées aux installations réalisées par une entreprise qualifiée RGE.</p>
+  </div>
+</section>
+
+<section id="realisations">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Nos réalisations</h2>
+      <p>Une sélection de chantiers récents, classés par équipement.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrer les réalisations">
+      <button aria-pressed="true" data-f="tout">Tout</button>
+      <button aria-pressed="false" data-f="pac">Pompes à chaleur</button>
+      <button aria-pressed="false" data-f="ballon">Ballons</button>
+      <button aria-pressed="false" data-f="clim">Climatisation</button>
+      <button aria-pressed="false" data-f="solaire">Solaire</button>
+    </div>
+    <div class="gallery">
+      <figure class="shot" data-c="pac"><div class="ph"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 40 32 8l28 32" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></div><figcaption>Pompe à chaleur air/eau<span>Maison individuelle</span></figcaption></figure>
+      <figure class="shot" data-c="ballon"><div class="ph"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 40 32 8l28 32" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></div><figcaption>Ballon thermodynamique<span>Remplacement de cumulus</span></figcaption></figure>
+      <figure class="shot" data-c="clim"><div class="ph"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 40 32 8l28 32" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></div><figcaption>Climatisation multi-split<span>Appartement</span></figcaption></figure>
+      <figure class="shot" data-c="solaire"><div class="ph"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 40 32 8l28 32" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></div><figcaption>Panneaux photovoltaïques<span>Autoconsommation</span></figcaption></figure>
+      <figure class="shot" data-c="pac"><div class="ph"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 40 32 8l28 32" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></div><figcaption>Remplacement de chaudière fioul<span>Maison individuelle</span></figcaption></figure>
+      <figure class="shot" data-c="clim"><div class="ph"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 40 32 8l28 32" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></div><figcaption>Climatisation de bureaux<span>Local professionnel</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="zone">
+  <div class="wrap">
+    <div>
+      <h2>Implantés à Créteil</h2>
+      <p>Nous intervenons dans tout le Val-de-Marne et, sur étude, dans le reste de l’Île-de-France.</p>
+    </div>
+    <ul class="towns">
+      <li>Créteil</li><li>Saint-Maur-des-Fossés</li><li>Maisons-Alfort</li><li>Vitry-sur-Seine</li><li>Champigny-sur-Marne</li><li>Vincennes</li><li>Nogent-sur-Marne</li><li>Le Perreux-sur-Marne</li><li>Ivry-sur-Seine</li><li>Villejuif</li><li>Bonneuil-sur-Marne</li><li>Sucy-en-Brie</li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Questions fréquentes</h2>
+    <div>
+      <details><summary>Une pompe à chaleur fonctionne-t-elle par grand froid ?</summary><p>Oui. Les modèles actuels chauffent jusqu’à des températures extérieures nettement négatives. Le dimensionnement tient compte des températures de votre secteur.</p></details>
+      <details><summary>Combien de temps dure l’installation ?</summary><p>En général un à trois jours pour une pompe à chaleur et une journée pour un ballon thermodynamique. La durée exacte figure dans le devis.</p></details>
+      <details><summary>Le diagnostic et le devis sont-ils payants ?</summary><p>Non, ils sont gratuits et sans engagement.</p></details>
+      <details><summary>Vous occupez-vous des dossiers d’aides ?</summary><p>Nous vous indiquons les aides auxquelles vous avez droit et vous accompagnons dans les démarches.</p></details>
+      <details><summary>Faut-il entretenir une pompe à chaleur ?</summary><p>Oui. Un entretien régulier préserve les performances et la durée de vie de l’équipement ; il est obligatoire au-delà de certaines puissances.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <aside class="card" aria-label="Coordonnées">
+      <h3>Groupe Prévert</h3>
+      <p>Diagnostic, conception et réalisation.</p>
+      <dl>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33100000000">01 00 00 00 00</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:contact@groupe-prevert.fr">contact@groupe-prevert.fr</a></dd></div>
+        <div><dt>Adresse</dt><dd>7 chemin des Mèches<br>94000 Créteil</dd></div>
+        <div><dt>Horaires</dt><dd class="hours"><span>Lun. – ven.</span><span>8 h – 18 h</span><span>Samedi</span><span>Sur rendez-vous</span></dd></div>
+      </dl>
+    </aside>
+    <div>
+      <h2>Demande de devis</h2>
+      <p class="lead">Décrivez votre projet. Nous vous recontactons pour fixer la visite de diagnostic.</p>
+      <form id="devis" novalidate>
+        <div class="fields two">
+          <div class="full"><label>Vous êtes</label>
+            <div class="seg" role="radiogroup" aria-label="Type de client">
+              <label><input type="radio" name="type" value="Particulier" checked><span>Particulier</span></label>
+              <label><input type="radio" name="type" value="Professionnel"><span>Professionnel</span></label>
+              <label><input type="radio" name="type" value="Syndic"><span>Syndic</span></label>
+            </div></div>
+          <div><label for="c-nom">Nom</label><input id="c-nom" name="nom" autocomplete="family-name" required></div>
+          <div><label for="c-prenom">Prénom</label><input id="c-prenom" name="prenom" autocomplete="given-name"></div>
+          <div><label for="c-tel">Téléphone</label><input id="c-tel" name="tel" type="tel" autocomplete="tel" required></div>
+          <div><label for="c-mail">E-mail</label><input id="c-mail" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="c-adr">Adresse des travaux</label><input id="c-adr" name="adresse" autocomplete="street-address"></div>
+          <div><label for="c-cp">Code postal</label><input id="c-cp" name="cp" inputmode="numeric" autocomplete="postal-code" required></div>
+          <div><label for="c-proj">Projet</label>
+            <select id="c-proj" name="projet"><option>Pompe à chaleur air/eau</option><option>Pompe à chaleur air/air ou climatisation</option><option>Ballon thermodynamique</option><option>Solaire / photovoltaïque</option><option>Entretien ou dépannage</option><option>Autre demande</option></select></div>
+          <div><label for="c-rappel">Être rappelé</label>
+            <select id="c-rappel" name="rappel"><option>Indifférent</option><option>Le matin</option><option>L’après-midi</option><option>En fin de journée</option></select></div>
+          <div class="full"><label for="c-msg">Message</label><textarea id="c-msg" name="message" placeholder="Surface, chauffage actuel, délai souhaité…"></textarea></div>
+          <label class="check full"><input type="checkbox" name="rgpd" required><span>J’accepte que mes données soient utilisées pour traiter ma demande. Elles ne sont ni cédées ni revendues.</span></label>
+          <div class="full"><button class="btn" type="submit">Envoyer ma demande</button></div>
+          <p class="msg full" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a class="brand" href="#accueil" aria-label="Groupe Prévert, accueil">
+          <svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 40 32 8l28 32" fill="none" stroke="#6AAA3F" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><rect x="44" y="10" width="8" height="16" fill="#6AAA3F"/><path d="M20 40 32 27l12 13" fill="none" stroke="#8A9397" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <span class="brand-txt">GROUPE PREVERT<small>DIAGNOSTIC CONCEPTION RÉALISATION</small></span>
+        </a>
+        <p class="about">Installation et entretien de pompes à chaleur, ballons thermodynamiques, climatisation et solaire dans le Val-de-Marne.</p>
+      </div>
+      <div><h4>Solutions</h4><ul><li><a href="#pac-air-eau">Pompe à chaleur air/eau</a></li><li><a href="#pac-air-air">Climatisation</a></li><li><a href="#ballon">Ballon thermodynamique</a></li><li><a href="#solaire">Solaire</a></li><li><a href="#entretien">Entretien</a></li></ul></div>
+      <div><h4>Entreprise</h4><ul><li><a href="#methode">Notre méthode</a></li><li><a href="#aides">Aides financières</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">Questions fréquentes</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33100000000">01 00 00 00 00</a></li><li><a href="mailto:contact@groupe-prevert.fr">contact@groupe-prevert.fr</a></li><li>7 chemin des Mèches, 94000 Créteil</li></ul></div>
+    </div>
+    <div class="legal" id="mentions">
+      <p>Groupe Prévert, SAS. Siège social : 7 chemin des Mèches, 94000 Créteil. SIREN 893 550 939, SIRET 893 550 939 00035, TVA intracommunautaire FR17893550939. Directeur de la publication : Claude Ben Oliel. Hébergeur : [à compléter].</p>
+      <p>© 2026 Groupe Prévert. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var MAIL='contact@groupe-prevert.fr';
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+
+  var dds=document.querySelectorAll('.dd');
+  function closeAll(ex){dds.forEach(function(d){if(d!==ex){d.classList.remove('open');d.firstElementChild.setAttribute('aria-expanded','false')}})}
+  dds.forEach(function(d){var b=d.firstElementChild;b.addEventListener('click',function(){var o=!d.classList.contains('open');closeAll(d);d.classList.toggle('open',o);b.setAttribute('aria-expanded',o)})});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');
+    if(!e.target.closest('.dd')||(a&&a.closest('.dd-panel')))closeAll();
+    if(a&&a.closest('#nav')){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}
+    if(a&&a.dataset.tab)showTab(a.dataset.tab);
+    if(a&&a.dataset.proj){document.getElementById('c-proj').value=a.dataset.proj}
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll()});
+
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  function showTab(k){tabs.forEach(function(t){var on=t.id==='t-'+k;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on})}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){showTab(t.id.slice(2))});
+    t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){var n=tabs[(i+d+tabs.length)%tabs.length];showTab(n.id.slice(2));n.focus()}});
+  });
+
+  var eqWrap=document.getElementById('eqWrap'),eqTabs=[].slice.call(eqWrap.querySelectorAll('.eq-tab')),eqTimer=null,eqI=0;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function showEq(i,user){
+    eqI=(i+eqTabs.length)%eqTabs.length;
+    eqTabs.forEach(function(t,j){var on=j===eqI,p=document.getElementById(t.getAttribute('aria-controls'));
+      t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;p.hidden=!on;
+      if(on){p.classList.remove('in');void p.offsetWidth;p.classList.add('in');var b=t.querySelector('.bar');b.style.animation='none';void b.offsetWidth;b.style.animation=''}});
+    if(user)stopEq();
+  }
+  function stopEq(){clearInterval(eqTimer);eqTimer=null;eqWrap.classList.remove('auto')}
+  function startEq(){if(reduce)return;eqWrap.classList.add('auto');eqTimer=setInterval(function(){showEq(eqI+1)},7000)}
+  eqTabs.forEach(function(t,i){
+    t.addEventListener('click',function(){showEq(i,true)});
+    t.addEventListener('keydown',function(e){var d=(e.key==='ArrowDown'||e.key==='ArrowRight')?1:(e.key==='ArrowUp'||e.key==='ArrowLeft')?-1:0;if(d){e.preventDefault();showEq(i+d,true);eqTabs[eqI].focus()}});
+  });
+  eqWrap.addEventListener('mouseenter',function(){if(eqTimer){clearInterval(eqTimer);eqTimer=null;eqWrap.classList.remove('auto')}});
+  eqWrap.addEventListener('mouseleave',function(){if(eqWrap.dataset.touched!=='1'&&!eqTimer)startEq()});
+  eqWrap.addEventListener('click',function(){eqWrap.dataset.touched='1'});
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&eqWrap.dataset.touched!=='1'&&!eqTimer)startEq();if(!e.isIntersecting)stopEq()})},{threshold:.4}).observe(eqWrap)}
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var idx=eqTabs.findIndex(function(t){return '#'+t.id===a.getAttribute('href')});if(idx>-1){eqWrap.dataset.touched='1';showEq(idx,true)}});
+
+  var fb=document.querySelectorAll('.filters button'),shots=document.querySelectorAll('.shot');
+  fb.forEach(function(b){b.addEventListener('click',function(){
+    fb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    shots.forEach(function(s){s.hidden=!(b.dataset.f==='tout'||s.dataset.c===b.dataset.f)});
+  })});
+
+  function send(form,subject,lines,okText){
+    var msg=form.querySelector('.msg');msg.classList.remove('err');
+    var miss=[].filter.call(form.querySelectorAll('[required]'),function(i){return i.type==='checkbox'?!i.checked:!i.value.trim()});
+    if(miss.length){msg.classList.add('err');msg.textContent='Complétez les champs obligatoires pour envoyer la demande.';miss[0].focus();return}
+    window.location.href='mailto:'+MAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
+    msg.textContent=okText;
+  }
+  document.getElementById('rappel').addEventListener('submit',function(e){e.preventDefault();var d=new FormData(this);
+    send(this,'Demande de rappel – '+d.get('projet'),['Nom : '+d.get('nom'),'Téléphone : '+d.get('tel'),'Projet : '+d.get('projet')],'Votre messagerie s’ouvre avec la demande pré-remplie.')});
+  document.getElementById('devis').addEventListener('submit',function(e){e.preventDefault();var d=new FormData(this);
+    send(this,'Demande de devis – '+d.get('projet'),['Client : '+d.get('type'),'Nom : '+d.get('nom')+' '+d.get('prenom'),'Téléphone : '+d.get('tel'),'E-mail : '+d.get('email'),'Adresse : '+d.get('adresse')+' '+d.get('cp'),'Projet : '+d.get('projet'),'Rappel : '+d.get('rappel'),'',d.get('message')],'Votre messagerie s’ouvre avec la demande pré-remplie.')});
+})();
+</script>
+</body>
+</html>
